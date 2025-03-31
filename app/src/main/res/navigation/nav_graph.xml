@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.e_koteapplication.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@+id/nav_about"/>
+        <action
+            android:id="@+id/action_homeFragment_to_helplineFragment"
+            app:destination="@id/nav_helpline" />
+        <action
+            android:id="@+id/action_homeFragment_to_dashboardFragment"
+            app:destination="@id/nav_dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.e_koteapplication.ui.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about">
+        <action
+            android:id="@+id/action_aboutFragment_to_homeFragment"
+            app:destination="@+id/nav_home"/>
+        <action
+            android:id="@+id/action_aboutFragment_to_helplineFragment"
+            app:destination="@id/nav_helpline" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_helpline"
+        android:name="com.example.e_koteapplication.ui.helpline.HelplineFragment"
+        android:label="Helpline &amp; Support "
+        tools:layout="@layout/fragment_helpline">
+        <action
+            android:id="@+id/action_helplineFragment_to_aboutFragment"
+            app:destination="@+id/nav_about"/>
+        <action
+            android:id="@+id/action_helplineFragment_to_homeFragment"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.e_koteapplication.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_inventoryFragment"
+            app:destination="@id/nav_inventory_management" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_maintenanceFragment"
+            app:destination="@id/nav_maintenance" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_issued_return"
+        android:name="com.example.e_koteapplication.ui.issuedreturn.issuedreturnFragment"
+        android:label="Issued/Return"
+        tools:layout="@layout/fragment_issuedreturn">
+        <action
+            android:id="@+id/action_IssuedReturnFragment_to_maintenanceFragment"
+            app:destination="@id/nav_maintenance"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_inventory_management"
+        android:name="com.example.e_koteapplication.ui.inventory.InventoryFragment"
+        android:label="Inventory Management"
+        tools:layout="@layout/fragment_inventory">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_maintenance"
+        android:name="com.example.e_koteapplication.ui.maintenance.maintenanceFragment"
+        android:label="Maintenance"
+        tools:layout="@layout/fragment_maintenance">
+    </fragment>
+
+</navigation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    android:padding="8dp"
+    android:gravity="left">
+
+    <TextView
+        android:id="@+id/textGunId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gun ID"
+        android:textSize="16sp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/textGunName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gun Name"
+        android:textSize="16sp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/textGunModel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gun Model"
+        android:textSize="16sp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/textMaintenanceDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Maintenance Date"
+        android:textSize="16sp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
